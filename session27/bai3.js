@@ -1,4 +1,3 @@
-// Hàm tính diện tích hình tròn
 function circleArea() {
     let radius = parseFloat(prompt("Nhập bán kính hình tròn:"));
     if (isNaN(radius) || radius <= 0) {
@@ -9,7 +8,6 @@ function circleArea() {
     alert(`Diện tích hình tròn: ${area.toFixed(2)}`);
 }
 
-// Hàm tính chu vi hình tròn
 function circlePerimeter() {
     let radius = parseFloat(prompt("Nhập bán kính hình tròn:"));
     if (isNaN(radius) || radius <= 0) {
@@ -20,7 +18,6 @@ function circlePerimeter() {
     alert(`Chu vi hình tròn: ${perimeter.toFixed(2)}`);
 }
 
-// Hàm tính diện tích hình chữ nhật
 function rectangleArea() {
     let width = parseFloat(prompt("Nhập chiều rộng hình chữ nhật:"));
     let height = parseFloat(prompt("Nhập chiều dài hình chữ nhật:"));
@@ -34,7 +31,6 @@ function rectangleArea() {
     alert(`Diện tích hình chữ nhật: ${area.toFixed(2)}`);
 }
 
-// Hàm tính chu vi hình chữ nhật
 function rectanglePerimeter() {
     let width = parseFloat(prompt("Nhập chiều rộng hình chữ nhật:"));
     let height = parseFloat(prompt("Nhập chiều dài hình chữ nhật:"));
@@ -48,7 +44,6 @@ function rectanglePerimeter() {
     alert(`Chu vi hình chữ nhật: ${perimeter.toFixed(2)}`);
 }
 
-// Hàm hiển thị menu và xử lý lựa chọn
 function menu() {
     while (true) {
         let choice = prompt(
@@ -82,5 +77,4 @@ function menu() {
     }
 }
 
-// Gọi menu để bắt đầu chương trình
 menu();
