@@ -1,6 +1,4 @@
-let students = []; // Mảng lưu danh sách sinh viên
-
-// Hàm nhập danh sách sinh viên
+let students = [];
 function addStudents() {
     let count = parseInt(prompt("Nhập số lượng sinh viên:"));
     if (isNaN(count) || count <= 0) {
@@ -14,12 +12,10 @@ function addStudents() {
             students.push(name);
         } else {
             alert("Tên sinh viên không hợp lệ!");
-            i--; // Yêu cầu nhập lại nếu tên trống
+            i--;
         }
     }
 }
-
-// Hàm hiển thị danh sách sinh viên
 function showStudents() {
     if (students.length === 0) {
         alert("Danh sách sinh viên trống!");
@@ -28,7 +24,6 @@ function showStudents() {
     alert("Danh sách sinh viên:\n" + students.join("\n"));
 }
 
-// Hàm tìm kiếm sinh viên theo tên
 function findStudent() {
     let name = prompt("Nhập tên sinh viên cần tìm:").trim();
     if (!name) {
@@ -45,7 +40,6 @@ function findStudent() {
     }
 }
 
-// Hàm xóa sinh viên theo tên (xóa sinh viên đầu tiên tìm thấy)
 function deleteStudent() {
     let name = prompt("Nhập tên sinh viên cần xóa:").trim();
     if (!name) {
@@ -62,8 +56,6 @@ function deleteStudent() {
         alert("Không tìm thấy sinh viên cần xóa!");
     }
 }
-
-// Hàm hiển thị menu và thực hiện chức năng
 function menu() {
     while (true) {
         let choice = prompt(
@@ -97,5 +89,4 @@ function menu() {
     }
 }
 
-// Gọi menu để bắt đầu chương trình
 menu();
