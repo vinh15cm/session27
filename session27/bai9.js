@@ -1,11 +1,15 @@
-function sapXepChanTang(mang) {
-    const soChan = mang.filter(num => num % 2 === 0).sort((a, b) => a - b);
-    let index = 0;
+function sortEvenNumbers(arr) {
+    if (!Array.isArray(arr) || arr.some(item => typeof item !== "number")) {
+        return "dữ liệu không hợp lệ";
+    }
+    let evenNumbers = arr.filter(num => num % 2 === 0).sort((a, b) => a - b);
+    let evenIndex = 0;
+    let result = arr.map(num => (num % 2 === 0 ? evenNumbers[evenIndex++] : num));
 
-    return mang.map(num => (num % 2 === 0 ? soChan[index++] : num));
+    return result;
 }
 
-console.log(sapXepChanTang([5, 3, 2, 8, 1, 4]));  // [5, 3, 2, 4, 1, 8]
-console.log(sapXepChanTang([2, 3, 4, 6, 7, 8]));  // [2, 3, 4, 6, 7, 8]
-console.log(sapXepChanTang([9, 7, 5, 3]));        // [9, 7, 5, 3]
-console.log(sapXepChanTang([10, 20, 30, 40]));    // [10, 20, 30, 40]
+
+console.log(sortEvenNumbers([5, 8, 6, 3, 4, 2, 7])); 
+console.log(sortEvenNumbers([5, 9, 6, 4, 1, 8, 3])); 
+console.log(sortEvenNumbers("abc")); 
