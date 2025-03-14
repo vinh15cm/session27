@@ -1,7 +1,11 @@
-function soLonNhatTuChuSo(n) {
-    return parseInt(String(Math.abs(n)).split('').sort((a, b) => b - a).join(''), 10);
+function getMaxNumberFromDigits(input) {
+    if (!Number.isInteger(input) || input < 0) {
+        return "dữ liệu không hợp lệ";
+    }
+    let maxNumber = Number(String(input).split('').sort((a, b) => b - a).join(''));
+    
+    return maxNumber;
 }
-
-console.log(soLonNhatTuChuSo(4213));
-console.log(soLonNhatTuChuSo(-3087));
-console.log(soLonNhatTuChuSo(9001));  
+console.log(getMaxNumberFromDigits(2941)); 
+console.log(getMaxNumberFromDigits(3875)); 
+console.log(getMaxNumberFromDigits("1h8t")); 
